@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export default function BrandStory() {
   return (
     <section id="about" style={{ backgroundColor: "var(--charcoal)", padding: "6rem 0", overflow: "hidden" }}>
@@ -116,9 +118,9 @@ export default function BrandStory() {
               ))}
             </div>
 
-            <a href="/about" className="btn-gold" style={{ textDecoration: "none" }}>
+            <Link to="/about" className="btn-gold" style={{ textDecoration: "none" }}>
               Read Our Story
-            </a>
+            </Link>
           </div>
         </div>
       </div>

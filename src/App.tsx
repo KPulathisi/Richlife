@@ -7,7 +7,7 @@ import Team from "./pages/Team"
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Richlife">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
