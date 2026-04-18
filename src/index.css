@@ -1,0 +1,182 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --gold: #c9a96e;
+    --gold-light: #e8d5a3;
+    --gold-dark: #a07840;
+    --black: #000000;
+    --dark: #0a0a0a;
+    --charcoal: #111111;
+    --card: #161616;
+    --border: #2a2a2a;
+    --muted: #6b6b6b;
+    --light: #e5e5e5;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--black);
+    color: #ffffff;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: var(--gold);
+    color: #000;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #111;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--gold);
+    border-radius: 2px;
+  }
+}
+
+@layer utilities {
+  .text-gold {
+    color: var(--gold);
+  }
+  .bg-gold {
+    background-color: var(--gold);
+  }
+  .border-gold {
+    border-color: var(--gold);
+  }
+  .bg-dark {
+    background-color: var(--dark);
+  }
+  .bg-charcoal {
+    background-color: var(--charcoal);
+  }
+  .bg-card {
+    background-color: var(--card);
+  }
+  .border-dark {
+    border-color: var(--border);
+  }
+  .text-muted {
+    color: var(--muted);
+  }
+  .text-light {
+    color: var(--light);
+  }
+
+  .btn-gold {
+    background-color: var(--gold);
+    color: #000;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.875rem 2.5rem;
+    font-size: 0.75rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+  }
+  .btn-gold:hover {
+    background-color: var(--gold-light);
+  }
+
+  .btn-outline {
+    background-color: transparent;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.875rem 2.5rem;
+    font-size: 0.75rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid var(--gold);
+    display: inline-block;
+  }
+  .btn-outline:hover {
+    background-color: var(--gold);
+    color: #000;
+  }
+
+  .section-label {
+    font-size: 0.6875rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+  }
+
+  .heading-xl {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+  }
+
+  .heading-lg {
+    font-size: clamp(1.75rem, 4vw, 3rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+
+  .divider-gold {
+    width: 3rem;
+    height: 1px;
+    background-color: var(--gold);
+  }
+
+  .img-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 50%, transparent 100%);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(var(--rotate, 0deg)); }
+  50% { transform: translateY(-20px) rotate(var(--rotate, 0deg)); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scaleY(1); }
+  50% { opacity: 0.6; transform: scaleY(0.8); }
+}
+
+.animate-fade-up {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.animate-delay-100 { animation-delay: 0.1s; }
+.animate-delay-200 { animation-delay: 0.2s; }
+.animate-delay-300 { animation-delay: 0.3s; }
