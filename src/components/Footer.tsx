@@ -51,7 +51,7 @@ export default function Footer() {
         >
           <div>
             <img
-              src="/FB_IMG_1776450125103.jpg.jpeg"
+              src={`${import.meta.env.BASE_URL}FB_IMG_1776450125103.jpg.jpeg`}
               alt="Rich Life Apparel"
               style={{ height: "60px", width: "auto", objectFit: "contain", marginBottom: "1.5rem" }}
             />

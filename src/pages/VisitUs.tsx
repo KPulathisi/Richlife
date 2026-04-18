@@ -101,7 +101,7 @@ export default function VisitUs() {
                 zIndex: 0,
               }} />
               <img
-                src="/about-brand.webp"
+                src={`${import.meta.env.BASE_URL}about-brand.webp`}
                 alt="Flagship Showroom"
                 style={{
                   width: "100%",

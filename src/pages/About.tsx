@@ -74,7 +74,7 @@ export default function About() {
                 zIndex: 0,
               }} />
               <img
-                src="/about-brand.webp"
+                src={`${import.meta.env.BASE_URL}about-brand.webp`}
                 alt="Rich Life Studio"
                 style={{
                   width: "100%",

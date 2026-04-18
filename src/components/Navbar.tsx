@@ -39,7 +39,7 @@ export default function Navbar() {
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: "80px" }}>
           <Link to="/" style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
             <img
-              src="/FB_IMG_1776450125103.jpg.jpeg"
+              src={`${import.meta.env.BASE_URL}FB_IMG_1776450125103.jpg.jpeg`}
               alt="Rich Life Apparel"
               style={{ height: "52px", width: "auto", objectFit: "contain" }}
             />

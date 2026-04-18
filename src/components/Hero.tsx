@@ -39,7 +39,7 @@ export default function Hero() {
         style={{
           position: "absolute",
           inset: "-20px",
-          backgroundImage: "url('/hero-bg.svg')",
+          backgroundImage: `url(${import.meta.env.BASE_URL}hero-bg.svg)`,
           backgroundSize: "cover",
           backgroundPosition: "center top",
           backgroundRepeat: "no-repeat",

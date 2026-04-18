@@ -22,7 +22,7 @@ export default function BrandStory() {
               }}
             />
             <img
-              src="/about-brand.webp"
+              src={`${import.meta.env.BASE_URL}about-brand.webp`}
               alt="Our Story"
               style={{
                 width: "100%",
